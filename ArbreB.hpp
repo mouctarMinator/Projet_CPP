@@ -11,15 +11,18 @@ class ArbreB{
     Sommet * racine;
     void insertion ( Sommet *&, char l, int oq);
     void suppression ( Sommet *&, char l);
-    bool recherche ( Sommet *, char l ) const ;
+    bool recherche ( Sommet *, char l ) const;
     void affichage ( const Sommet *, int ) const ; 
     public:
     ArbreB ();                     
     ArbreB (Sommet &s);
+    ArbreB (Sommet *& s );
+
     ArbreB (ArbreB & a);
-    ~ArbreB ();    
+    ~ArbreB ();  
+    ArbreB & operator = (ArbreB & a);
     
-    ArbreB fusioner (ArbreB & a);
+    ArbreB & fusioner (ArbreB & a);
     void inserer (char l, int oq );
 
     void afficher ();

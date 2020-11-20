@@ -16,6 +16,7 @@ class Sommet{
         Sommet (char l, int oq, Sommet * filsG, Sommet * filsD);
         Sommet (int oq, Sommet * filsG, Sommet * filsD);
         Sommet (Sommet &s);
+        Sommet (Sommet *&s);
        ~Sommet ();
        
         char getLettre() const;
@@ -28,7 +29,9 @@ class Sommet{
         bool estFeuille ();
        
         Sommet & operator = (Sommet & s);
+    
         friend std::ostream& operator << (std::ostream& flux, Sommet& s);
+        friend std::ostream& operator << (std::ostream& flux, Sommet *& s);
 };
 
 #endif

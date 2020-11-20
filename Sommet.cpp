@@ -19,13 +19,20 @@ Sommet::Sommet (int oq, Sommet * filsG, Sommet * filsD){
     lettre = '\0';
     occurences = oq;
     filsGauche = filsG;;
-    filsGauche = filsD;
+    filsDroit = filsD;
 };
 Sommet::Sommet (Sommet &s){
     lettre = s.lettre;
     occurences = s.occurences;
     filsGauche = s.getFilsGauche();
-    filsDroit  = s.getFilsDroit();
+    filsDroit  = s.getFilsDroit();  
+};
+
+Sommet::Sommet (Sommet *&s){
+    lettre = s->lettre;
+    occurences = s->occurences;
+    filsGauche = s->getFilsGauche();
+    filsDroit  = s->getFilsDroit();
 };
 
 Sommet & Sommet::operator = (Sommet & s){
@@ -37,7 +44,7 @@ Sommet & Sommet::operator = (Sommet & s){
 };
 
 Sommet::~Sommet (){
-    //destruction
+    //destruction here
 };
 
 char Sommet::getLettre() const{ return lettre; };
@@ -52,12 +59,17 @@ bool Sommet::estFeuille (){ return (filsGauche == NULL) && (filsDroit == NULL); 
        
 
 ostream& operator << (ostream& flux, Sommet& s){
-    if (s.lettre != '\0'){
-        cout <<"["<<s.lettre<<"|"<<s.getOccurences()<< "]";
-    }
-    else
-    {
-        cout <<"["<<s.getOccurences()<< "]";
-    }
+    if (s.lettre != '\0'){ cout <<"["<<s.getLettre()<<"|"<<s.getOccurences()<< "]"; }
+
+    else {cout <<"["<<s.getOccurences()<< "]"; }
+
+    return flux;
+};
+
+ostream& operator << (ostream& flux, Sommet *& s){
+    if (s->lettre != '\0'){  cout <<"["<<s->getLettre()<<"|"<<s->getOccurences()<< "]"; }
+
+    else {cout <<"["<<s->getOccurences()<< "]"; }
+   
     return flux;
 };

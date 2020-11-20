@@ -1,0 +1,6 @@
+execute
+*.o
+Ressources/
+ProjetCPP/
+mesTest.cpp
+workspace.code-workspace

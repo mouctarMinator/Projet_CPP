@@ -9,24 +9,15 @@ Le projet contient 7 fichiers :
     6. mainProjet.cpp : fichier qui contient tous les tests
     7. Makefile : pour la compilation
 
--Lacunes concernant les fonctions insertion, suppression et recherche de sommet:
+-Concernant les fonctions insertion, suppression et recherche de sommet:
  L’implémentation de ces fonction dans un arbre binaire de recherche est à priori évident.
  Mais un arbre de Huffmann n’est pas un ABR. 
- Quand aux fonctions d’étiquettes de sommets, de fusion d’arbre c’est évident qu’on en a besoin pour formé l’arbre de Huffmann. Donc pour les fonctions que j’ai citées plus haut, nous les avons implémentées  pour un ABR. 
+ Quand aux fonctions d’étiquettes de sommets, de fusion d’arbre c’est évident qu’on en a besoin pour formé l’arbre de Huffmann. Donc pour les fonctions que  j’ai citées plus haut, je les ai  implémentées à la façoon d'un ABR, puis transformer pour respecter le principe de Huffmann. 
 
 -Affichage de l’arbre : 
-Nous n’avons pas encore réussi à adapter le code pour une interface graphique. Tout est afficher sur le terminal pour le moment. L’affichage d’un arbre de racine 15 et et fils gauche [B|10] et de fils droit [A|5] se fait comme suit :
+L’affichage d’un arbre de racine 15 et et fils gauche [B|10] et de fils droit [A|5] se fait comme suit :
 
  		        [A|5]
           15
                	[B|10]
-
-
-
-
-
-
-
-Binôme : Mamadou Mouctar BARRY et Princy  RASOLOARIVONY 
-
   
